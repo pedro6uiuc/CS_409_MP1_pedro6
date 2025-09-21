@@ -1,1 +1,71 @@
 /* Your SCSS here. */
+
+body{
+    margin: 0;
+    background-image: url(../assets/dibujo_guapo.jpg);
+}
+#navbar{
+    position:fixed;
+    display: flex;
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    top:0%;
+    background-color: rgb(223, 113, 24);
+}
+#logo{
+    margin: 0%;
+    max-width: 100%;
+    height: auto;
+}
+#navbar_text{
+    margin-left: 0%;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+
+}
+#About, #Hobbies{
+    margin-top: 10%;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background-color: rgb(235, 214, 186);
+    object-fit: scale-down;
+}
+.text_content{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+}
+#Computer_Science{
+    margin-top: 10%;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    object-fit: scale-down;
+}
+img{
+    margin: 3%;
+    max-width: 100%;
+    height: auto;
+}
+#Social_networks{
+    display: flex;
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    background-color: rgb(223, 113, 24);
+}
+.share-btn {
+  text-decoration: none;
+  display: inline-block;
+  color: #ffffff;
+  border: none;
+  padding: 0.1% 0.6%;
+  outline: none;
+  text-align: center;
+  margin: 1%;
+}
+.share-btn.twitter{ background: #55acee; }
+.share-btn.github{background: #032742;}
