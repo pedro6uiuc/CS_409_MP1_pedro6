@@ -8,6 +8,9 @@ const Navbar = document.getElementById("navbar");
 const h_left_btn = document.getElementById("prev_h");
 const h_right_btn = document.getElementById("next_h");
 const hobbies_list = document.getElementsByClassName("slide");
+const modal_objects = document.getElementsByClassName("modal");
+const modal_btns = document.getElementsByClassName("Parents_btn");
+const close_modal_btns = document.getElementsByClassName("close_btn");
 btns[0].addEventListener('click',()=>{
     About.scrollIntoView();
     Navbar.style.height = '10%';
@@ -63,6 +66,8 @@ window.addEventListener('scroll', ()=>{
     }
     else{
         btns[3].style.backgroundColor= '';
+        modal_objects[1].style.display="none";
+        modal_objects[0].style.display="none";
     }
 })
 var h_position = 0;
@@ -80,4 +85,16 @@ h_right_btn.addEventListener('click',()=>{
 
 
 
+})
+modal_btns[0].addEventListener('click', ()=>{
+    modal_objects[0].style.display="block";
+})
+modal_btns[1].addEventListener('click', ()=>{
+    modal_objects[1].style.display="block";
+})
+close_modal_btns[0].addEventListener('click', ()=>{
+    modal_objects[0].style.display="none";
+})
+close_modal_btns[1].addEventListener('click', ()=>{
+    modal_objects[1].style.display="none";
 })

@@ -1,4 +1,6 @@
 /* Your SCSS here. */
+$translucid_color:hsla(52%, 88%, 81%, 0.75);
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 10% ;
@@ -38,7 +40,7 @@ h1{
         transition: background-color 0.5s ease-in-out;
     }
     h3:hover{
-            background-color: hsla(52%, 88%, 81%, 0.75);
+            background-color: $translucid_color;
     }
 
 }
@@ -51,7 +53,7 @@ h1{
     justify-content: center;
     align-content: center;
     text-align: center;
-    background-color: hsla(52%, 88%, 81%, 0.75);
+    background-color: $translucid_color;
     border-radius: 25px;
     border: solid 2px #ffffff;
         
@@ -73,7 +75,7 @@ h1{
     display: flex;
     background-color: rgb(235, 214, 186);
     flex-direction: column;
-    
+    align-items: center;
     object-fit: scale-down;
 
 }
@@ -93,7 +95,7 @@ h1{
     }
 }
 .slide{
-    width: 30%;
+    width: 50%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -117,6 +119,8 @@ h1{
     display: flex;
     flex-direction: column;
     margin: 1%;
+    text-align: center;
+    width: 45%;
 
     h1{
         font-style: italic;
@@ -132,6 +136,18 @@ h1{
     height: 50%;
     display: flex;
     object-fit: scale-down;
+    .text_content{
+        padding: 1%;
+        background-color: hsla(52%, 88%, 81%, 0.75);
+        border-radius: 25px;
+        border: solid 2px #ffffff;
+    }
+    video{
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+    }
+    
 
 }
 #Parents{
@@ -140,6 +156,7 @@ h1{
     height: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content:right ;
     object-fit: scale-down;
     #container{
@@ -155,6 +172,47 @@ h1{
             }
         }
     }
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 7;
+    top:0;
+    width: 100%;
+    height: 100%;
+    transition: display 0.5s ease-in-out; 
+}
+#mum{
+    left:-25%;
+}
+#dad{
+    left:25%;
+}
+.modal_content{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 20%;
+    margin: 20% auto;
+    background-color: $translucid_color;
+    border-radius: 25px;
+    border: solid 2px #ffffff;
+    p{
+        margin:3%;
+    }
+}
+.close_btn{
+    top:0;
+    left:0;
+    width: 2%;
+    height: 2%;
+    padding: 1%;
+}
+.close_btn:hover{
+    cursor: pointer;
+}
+.Modal_text{
+    text-align: center;
 }
 img{
     margin: 3%;
