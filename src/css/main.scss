@@ -7,6 +7,9 @@ body{
     margin: 0;
     background-image: url(../assets/dibujo_guapo.jpg);
 }
+h1{
+    margin-left: 5%;
+}
 #navbar{
     position:fixed;
     display: flex;
@@ -28,7 +31,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
+    h3{
+        padding: 2%;
+        border-radius: 12.5%;
+        transition: background-color 0.5s ease-in-out;
+    }
+    h3:hover{
+            background-color: hsla(52%, 88%, 81%, 0.75);
+    }
 
 }
 #intro{
@@ -46,7 +57,7 @@ body{
         
     }
 
-#About, #Hobbies{
+#About{
     margin-top: 10%;
     width: 100%;
     height: 50%;
@@ -54,6 +65,53 @@ body{
     background-color: rgb(235, 214, 186);
     object-fit: scale-down;
 
+}
+#Hobbies{
+    margin-top: 10%;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    background-color: rgb(235, 214, 186);
+    flex-direction: column;
+    
+    object-fit: scale-down;
+
+}
+#hobbies_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;    
+    #prev_h, #next_h{
+        margin: 2%;
+        padding: 2%;
+        border-radius: 12.5%;
+        transition: background-color 0.5s ease-in-out;
+    }
+    #prev_h:hover, #next_h:hover{
+        background-color: hsla(52%, 88%, 81%, 0.75);
+    }
+}
+.slide{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+.slide img{
+        display: block;
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    };
+.active{
+    display: flex;
+}
+.inactive{
+    display: none;
 }
 .text_content{
     display: flex;
@@ -75,6 +133,28 @@ body{
     display: flex;
     object-fit: scale-down;
 
+}
+#Parents{
+    margin-top: 10%;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:right ;
+    object-fit: scale-down;
+    #container{
+        display: flex;
+        justify-content: space-between;
+        div {
+            margin: 0% 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                border-radius: 25px;
+            }
+        }
+    }
 }
 img{
     margin: 3%;
