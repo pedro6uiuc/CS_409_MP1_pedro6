@@ -12,9 +12,30 @@ body{
 h1{
     margin-left: 5%;
 }
+
+@keyframes horizontal{
+    0%{
+        left: 20%;
+    }
+    50%{
+        left: 72%;
+    }
+    100%{
+        left: 20%;
+    }
+}
+
+.animation{
+    position: absolute;
+    width: 5%;
+    margin:1%;
+    animation: horizontal 6s ease-in-out 0s infinite;
+}
+
 #navbar{
     position:fixed;
     display: flex;
+    z-index: 3;
     height: 20%;
     width: 100%;
     margin: 0;
@@ -49,7 +70,8 @@ h1{
     flex-direction: column;
     width: 50%;
     height: 30%;
-    margin: 20% auto;
+    margin: 20% auto auto;
+
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -64,10 +86,16 @@ h1{
     width: 100%;
     height: 50%;
     display: flex;
+    justify-content: space-around;
     background-color: rgb(235, 214, 186);
-    object-fit: scale-down;
+    div {
+        width: 45%;
+        height: 30%;
+        
+    }
 
 }
+
 #Hobbies{
     margin-top: 10%;
     width: 100%;
@@ -159,6 +187,12 @@ h1{
     align-items: center;
     justify-content:right ;
     object-fit: scale-down;
+    h1{
+        padding: 1%;
+        background-color: $translucid_color;
+        border: solid 2px #ffffff;
+        border-radius: 25px;
+    }
     #container{
         display: flex;
         justify-content: space-between;
@@ -170,8 +204,13 @@ h1{
             img{
                 border-radius: 25px;
             }
+            img:hover{
+                cursor: pointer;
+                border:solid 2px #ffffff;
+            }
         }
     }
+
 }
 .modal{
     display: none;
@@ -192,7 +231,7 @@ h1{
     display: flex;
     flex-direction: column;
     width: 25%;
-    height: 20%;
+    height: auto;
     margin: 20% auto;
     background-color: $translucid_color;
     border-radius: 25px;
@@ -217,7 +256,7 @@ h1{
 img{
     margin: 3%;
     max-width: 100%;
-    height: auto;
+
 }
 #Social_networks{
     display: flex;
